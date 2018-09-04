@@ -8,14 +8,14 @@
 const React = require("react");
 
 class Footer extends React.Component {
-  docUrl(doc, language) {
+  docUrl(doc) {
     const baseUrl = this.props.config.baseUrl;
-    return `${baseUrl}docs/${language ? `${language}/` : ""}${doc}`;
+    return `${baseUrl}docs/${doc}`;
   }
 
-  pageUrl(doc, language) {
+  pageUrl(doc) {
     const baseUrl = this.props.config.baseUrl;
-    return baseUrl + (language ? `${language}/` : "") + doc;
+    return baseUrl + doc;
   }
 
   render() {
@@ -34,14 +34,10 @@ class Footer extends React.Component {
           </a>
           <div>
             <h5>Docs</h5>
-            <a href={this.docUrl("doc1.html", this.props.language)}>
-              Getting Started
-            </a>
-            <a href={this.docUrl("doc2.html", this.props.language)}>Guides</a>
-            <a href={this.docUrl("doc3.html", this.props.language)}>
-              API Reference
-            </a>
-            <a href={this.docUrl("doc3.html", this.props.language)}>Examples</a>
+            <a href={this.docUrl("installation")}>Getting Started</a>
+            <a href={this.docUrl("custom-step-guide")}>Guides</a>
+            <a href={this.docUrl("step-api")}>API Reference</a>
+            <a href={this.pageUrl("examples")}>Examples</a>
           </div>
           <div>
             <h5>Community</h5>
