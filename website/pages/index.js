@@ -19,11 +19,11 @@ function imgUrl(img) {
   return `${siteConfig.baseUrl}img/${img}`;
 }
 
-function docUrl(doc, language) {
+function docUrl(doc) {
   return `${siteConfig.baseUrl}docs/${doc}`;
 }
 
-function pageUrl(page, language) {
+function pageUrl(page) {
   return siteConfig.baseUrl + page;
 }
 
@@ -74,16 +74,12 @@ const PromoSection = props => (
 
 class HomeSplash extends React.Component {
   render() {
-    const language = this.props.language || "";
     return (
       <SplashContainer>
-        <Logo img_src={imgUrl("docusaurus.svg")} />
         <div className="inner">
           <ProjectTitle />
           <PromoSection>
-            <Button href="#try">Try It Out</Button>
-            <Button href={docUrl("doc1.html", language)}>Example Link</Button>
-            <Button href={docUrl("doc2.html", language)}>Example Link 2</Button>
+            <Button href={docUrl("installation")}>Get Started</Button>
           </PromoSection>
         </div>
       </SplashContainer>
@@ -105,29 +101,27 @@ const Features = () => (
   <Block layout="fourColumn">
     {[
       {
-        content: "This is the content of my feature",
-        image: imgUrl("docusaurus.svg"),
+        content:
+          "A simple API to build from simple loading bars to complex progress bars with steps",
+        image: imgUrl("simple.png"),
         imageAlign: "top",
-        title: "Feature One"
+        title: "Simple"
       },
       {
-        content: "The content of my second feature",
-        image: imgUrl("docusaurus.svg"),
+        content: "Design your own steps and make your progress bar unique",
+        image: imgUrl("customizable.png"),
         imageAlign: "top",
-        title: "Feature Two"
+        title: "Customizable"
+      },
+      {
+        content:
+          "Make it dynamic by adding catchy transition when a step is accomplished",
+        image: imgUrl("animatable.png"),
+        imageAlign: "top",
+        title: "Animatable"
       }
     ]}
   </Block>
-);
-
-const FeatureCallout = () => (
-  <div
-    className="productShowcaseSection paddingBottom"
-    style={{ textAlign: "center" }}
-  >
-    <h2>Feature Callout</h2>
-    <MarkdownBlock>These are features of this project</MarkdownBlock>
-  </div>
 );
 
 const LearnHow = () => (
@@ -178,7 +172,6 @@ class Index extends React.Component {
         <HomeSplash language={language} />
         <div className="mainContainer">
           <Features />
-          <FeatureCallout />
           <LearnHow />
           <TryOut />
           <Description />

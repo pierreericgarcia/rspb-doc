@@ -13,8 +13,8 @@
 //   {
 //     caption: "User1",
 //     // You will need to prepend the image path with your baseUrl
-//     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
-//     image: "/img/docusaurus.svg",
+//     // if it is not '/', like: '/test-site/img/docusaurus.png'.
+//     image: "/img/docusaurus.png",
 //     infoLink: "https://www.facebook.com",
 //     pinned: true
 //   }
@@ -39,8 +39,6 @@ const siteConfig = {
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
     { doc: "installation", label: "Docs" },
-    { doc: "custom-step-guide", label: "Guides" },
-    { doc: "step-api", label: "API" },
     { page: "examples", label: "Examples" },
     {
       href: "https://github.com/pierreericgarcia/react-step-progress-bar",
@@ -53,14 +51,14 @@ const siteConfig = {
   // users,
 
   /* path to images for header/footer */
-  headerIcon: "img/docusaurus.svg",
-  footerIcon: "img/docusaurus.svg",
+  headerIcon: "img/react-step-progress-bar-logo.png",
+  footerIcon: "img/react-step-progress-bar-logo.png",
   favicon: "img/favicon.png",
 
   /* Colors for website */
   colors: {
-    primaryColor: "#2E8555",
-    secondaryColor: "#205C3B"
+    primaryColor: "#444444",
+    secondaryColor: "#f19f9c"
   },
 
   /* Custom fonts for website */
@@ -94,8 +92,8 @@ const siteConfig = {
   cleanUrl: true,
 
   // Open Graph and Twitter card images.
-  ogImage: "img/docusaurus.png",
-  twitterImage: "img/docusaurus.png",
+  ogImage: "img/react-step-progress-bar-logo.png",
+  twitterImage: "img/react-step-progress-bar-logo.png",
   twitterUsername: "pierrericgarcia",
   scrollToTop: true,
   // You may provide arbitrary config keys to be used as needed by your
