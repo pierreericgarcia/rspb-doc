@@ -73,7 +73,8 @@ class Footer extends React.Component {
           </div>
         </section>
         <section className="copyright">
-          Made with 💘 by pierreericgarcia
+          Made with 💘 by{" "}
+          <a href="https://github.com/pierreericgarcia">pierreericgarcia</a>
         </section>
       </footer>
     );

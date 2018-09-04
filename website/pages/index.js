@@ -7,7 +7,7 @@
 
 const React = require("react");
 
-const CompLibrary = require("../../core/CompLibrary.js");
+const CompLibrary = require("../core/CompLibrary.js");
 
 const MarkdownBlock = CompLibrary.MarkdownBlock; /* Used to read markdown */
 const Container = CompLibrary.Container;
@@ -20,11 +20,11 @@ function imgUrl(img) {
 }
 
 function docUrl(doc, language) {
-  return `${siteConfig.baseUrl}docs/${language ? `${language}/` : ""}${doc}`;
+  return `${siteConfig.baseUrl}docs/${doc}`;
 }
 
 function pageUrl(page, language) {
-  return siteConfig.baseUrl + (language ? `${language}/` : "") + page;
+  return siteConfig.baseUrl + page;
 }
 
 class Button extends React.Component {
