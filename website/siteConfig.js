@@ -38,10 +38,15 @@ const siteConfig = {
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
-    { doc: "doc1", label: "Docs" },
-    { doc: "doc4", label: "API" },
-    { page: "help", label: "Help" },
-    { blog: true, label: "Blog" }
+    { doc: "installation", label: "Docs" },
+    { doc: "custom-step-guide", label: "Guides" },
+    { doc: "step-api", label: "API" },
+    { page: "examples", label: "Examples" },
+    {
+      href: "https://github.com/pierreericgarcia/react-step-progress-bar",
+      label: "GitHub"
+    },
+    { search: true }
   ],
 
   // If you have users set above, you add it here:
@@ -73,7 +78,7 @@ const siteConfig = {
   */
 
   // This copyright info is used in /core/Footer.js and blog RSS/Atom feeds.
-  copyright: `Copyright © ${new Date().getFullYear()} Your Name or Your Company Name`,
+  copyright: `Copyright © ${new Date().getFullYear()} Pierre-Eric Garcia`,
 
   highlight: {
     // Highlight.js theme to use for syntax highlighting in code blocks.
@@ -91,7 +96,8 @@ const siteConfig = {
   // Open Graph and Twitter card images.
   ogImage: "img/docusaurus.png",
   twitterImage: "img/docusaurus.png",
-
+  twitterUsername: "pierrericgarcia",
+  scrollToTop: true,
   // You may provide arbitrary config keys to be used as needed by your
   // template. For example, if you need your repo's URL...
   repoUrl: "https://github.com/pierreericgarcia/react-step-progress-bar"
