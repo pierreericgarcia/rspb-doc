@@ -4,6 +4,18 @@
   padding: 0;
 }
 
+.post {
+  margin-top: 40px;
+}
+
+.post a {
+  text-decoration: underline;
+}
+
+.copyright a {
+  color: #f19f9c;
+}
+
 @media only screen and (min-device-width: 360px) and (max-device-width: 736px) {
 }
 
