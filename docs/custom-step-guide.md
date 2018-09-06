@@ -37,8 +37,6 @@ One thing that can come handy is to display the index of the step on the render.
 
 Recover the `index` data from the `<Step/>` component and use it in the React element you're rendering.
 
-#### Code :
-
 ```jsx
 <ProgressBar percent={25}>
   <Step>
@@ -67,4 +65,6 @@ Recover the `index` data from the `<Step/>` component and use it in the React el
 
 By doing that you'll get 3 steps respectively labeled 1, 2 and 3.
 
-#### Result :
+Note that you can dynamically style the accomplished steps using the `accomplished` value and set CSS rules depending on the current value.
+
+If you want to get more ideas on how to use those values to create awesome steps take a look the [examples showcase](/examples).
