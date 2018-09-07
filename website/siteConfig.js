@@ -23,11 +23,8 @@
 const siteConfig = {
   title: "react-step-progress-bar", // Title for your website.
   tagline: "A library to create stunning progress bars and steps in React.",
-  url: "https://react-step-progress-bar.herokuapp.com", // Your website URL
-  baseUrl: "/", // Base URL for your project */
-  // For github.io type URLs, you would set the url and baseUrl like:
-  //   url: 'https://facebook.github.io',
-  //   baseUrl: '/test-site/',
+  url: "https://pierreericgarcia.github.io",
+  baseUrl: "/react-step-progress-bar/",
 
   // Used for publishing and more
   projectName: "react-step-progress-bar",
