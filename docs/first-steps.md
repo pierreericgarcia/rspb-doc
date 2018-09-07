@@ -36,7 +36,7 @@ class ProgressBar extends React.Component {
 #### Result :
 
 <p align="center" >
-    <img alt="simple progress bar" src="/img/simple-progress-bar.gif" width="100%" />
+    <img alt="simple progress bar" src="/react-step-progress-bar/img/simple-progress-bar.gif" width="100%" />
 </p>
 
 The `<ProgressBar/>` component is pretty straight forward to use. The important thing here is the `percent` prop.
@@ -100,7 +100,7 @@ class StepProgressBar extends React.Component {
 #### Result :
 
 <p align="center" >
-    <img alt="progress bar with steps" src="/img/progress-bar-with-steps.gif" width="100%" />
+    <img alt="progress bar with steps" src="/react-step-progress-bar/img/progress-bar-with-steps.gif" width="100%" />
 </p>
 
 As you can see the code is much longer here. Why ?
