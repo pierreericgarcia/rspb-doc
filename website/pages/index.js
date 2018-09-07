@@ -98,7 +98,7 @@ const Block = props => (
 );
 
 const Features = () => (
-  <Block layout="fourColumn">
+  <Block layout="fourColumn" background="light">
     {[
       {
         content:
@@ -124,40 +124,26 @@ const Features = () => (
   </Block>
 );
 
-const LearnHow = () => (
-  <Block background="light">
+const Testimonials = () => (
+  <Block layout="fourColumn">
     {[
       {
-        content: "Talk about learning how to use this",
-        image: imgUrl("docusaurus.svg"),
-        imageAlign: "right",
-        title: "Learn How"
-      }
-    ]}
-  </Block>
-);
-
-const TryOut = () => (
-  <Block id="try">
-    {[
+        content: "Steve Jobs",
+        image: imgUrl("steve-jobs.png"),
+        imageAlign: "top",
+        title: '"Progress has now its own library."'
+      },
       {
-        content: "Talk about trying this out",
-        image: imgUrl("docusaurus.svg"),
-        imageAlign: "left",
-        title: "Try it Out"
-      }
-    ]}
-  </Block>
-);
-
-const Description = () => (
-  <Block background="dark">
-    {[
+        content: "Elon Musk",
+        image: imgUrl("elon-musk.png"),
+        imageAlign: "top",
+        title: '"RSPB completely disturbed the progress bar industry."'
+      },
       {
-        content: "This is another description of how this project is useful",
-        image: imgUrl("docusaurus.svg"),
-        imageAlign: "right",
-        title: "Description"
+        content: "Darth Vader",
+        image: imgUrl("darth-vader.png"),
+        imageAlign: "top",
+        title: '"Come to the dark side, we have react-step-progress-bar."'
       }
     ]}
   </Block>
@@ -172,9 +158,7 @@ class Index extends React.Component {
         <HomeSplash language={language} />
         <div className="mainContainer">
           <Features />
-          <LearnHow />
-          <TryOut />
-          <Description />
+          <Testimonials />
         </div>
       </div>
     );
