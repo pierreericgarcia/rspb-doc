@@ -137,7 +137,7 @@ const Testimonials = () => (
         content: "Elon Musk",
         image: imgUrl("elon-musk.png"),
         imageAlign: "top",
-        title: '"RSPB completely disturbed the progress bar industry."'
+        title: '"RSPB completely disrupted the progress bar industry."'
       },
       {
         content: "Darth Vader",
