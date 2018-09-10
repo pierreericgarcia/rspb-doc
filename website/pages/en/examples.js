@@ -20,18 +20,31 @@ const SimpleProgressBarCode = `
 \`\`\`
 `;
 
-const SimpleProgressBar = props => (
-  <Container
-    className="exampleContainer"
-    id={props.id}
-    background={props.background}
-  >
-    <h2>Simple progress bar</h2>
-    <ProgressBar percent={75} />
-    <h4>JS</h4>
-    <MarkdownBlock>{SimpleProgressBarCode}</MarkdownBlock>
-  </Container>
-);
+class SimpleProgressBar extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      percent: 75
+    };
+  }
+
+  render() {
+    const { percent } = this.state;
+
+    return (
+      <Container
+        className="exampleContainer"
+        id={this.props.id}
+        background={this.props.background}
+      >
+        <h2>Simple progress bar</h2>
+        <ProgressBar percent={percent} />
+        <h4>JS</h4>
+        <MarkdownBlock>{SimpleProgressBarCode}</MarkdownBlock>
+      </Container>
+    );
+  }
+}
 
 const SimpleGradientProgressBarCode = `
 \`\`\`jsx
@@ -42,25 +55,38 @@ const SimpleGradientProgressBarCode = `
 \`\`\`
 `;
 
-const SimpleGradientProgressBar = props => (
-  <Container
-    className="exampleContainer"
-    id={props.id}
-    background={props.background}
-  >
-    <h2>Simple progress bar with gradient</h2>
-    <ProgressBar
-      fillBackground="linear-gradient(to right, #fefb72, #f0bb31)"
-      percent={75}
-    />
-    <h4>JS</h4>
-    <MarkdownBlock>{SimpleGradientProgressBarCode}</MarkdownBlock>
-  </Container>
-);
+class SimpleGradientProgressBar extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      percent: 75
+    };
+  }
+
+  render() {
+    const { percent } = this.state;
+
+    return (
+      <Container
+        className="exampleContainer"
+        id={this.props.id}
+        background={this.props.background}
+      >
+        <h2>Simple progress bar with gradient</h2>
+        <ProgressBar
+          fillBackground="linear-gradient(to right, #fefb72, #f0bb31)"
+          percent={percent}
+        />
+        <h4>JS</h4>
+        <MarkdownBlock>{SimpleGradientProgressBarCode}</MarkdownBlock>
+      </Container>
+    );
+  }
+}
 
 const IndexedStepProgressBarCode = `
 \`\`\`jsx
-<ProgressBar percent={35}>
+<ProgressBar percent={75}>
   <Step>
     {({ accomplished, index }) => (
       <div
@@ -112,54 +138,73 @@ const IndexedStepProgressBarCSS = `
 \`\`\`
 `;
 
-const IndexedStepProgressBar = props => (
-  <Container
-    className="exampleContainer"
-    id={props.id}
-    background={props.background}
-  >
-    <h2>Indexed step progress bar</h2>
-    <ProgressBar percent={35}>
-      <Step>
-        {({ accomplished, index }) => (
-          <div
-            className={`indexedStep ${accomplished ? "accomplished" : null}`}
-          >
-            {index + 1}
-          </div>
-        )}
-      </Step>
-      <Step>
-        {({ accomplished, index }) => (
-          <div
-            className={`indexedStep ${accomplished ? "accomplished" : null}`}
-          >
-            {index + 1}
-          </div>
-        )}
-      </Step>
-      <Step>
-        {({ accomplished, index }) => (
-          <div
-            className={`indexedStep ${accomplished ? "accomplished" : null}`}
-          >
-            {index + 1}
-          </div>
-        )}
-      </Step>
-    </ProgressBar>
-    <h4>JS</h4>
-    <MarkdownBlock>{IndexedStepProgressBarCode}</MarkdownBlock>
-    <h4>CSS</h4>
-    <MarkdownBlock>{IndexedStepProgressBarCSS}</MarkdownBlock>
-  </Container>
-);
+class IndexedStepProgressBar extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      percent: 75
+    };
+  }
+
+  render() {
+    const { percent } = this.state;
+
+    return (
+      <Container
+        className="exampleContainer"
+        id={this.props.id}
+        background={this.props.background}
+      >
+        <h2>Indexed step progress bar</h2>
+        <ProgressBar percent={percent}>
+          <Step>
+            {({ accomplished, index }) => (
+              <div
+                className={`indexedStep ${
+                  accomplished ? "accomplished" : null
+                }`}
+              >
+                {index + 1}
+              </div>
+            )}
+          </Step>
+          <Step>
+            {({ accomplished, index }) => (
+              <div
+                className={`indexedStep ${
+                  accomplished ? "accomplished" : null
+                }`}
+              >
+                {index + 1}
+              </div>
+            )}
+          </Step>
+          <Step>
+            {({ accomplished, index }) => (
+              <div
+                className={`indexedStep ${
+                  accomplished ? "accomplished" : null
+                }`}
+              >
+                {index + 1}
+              </div>
+            )}
+          </Step>
+        </ProgressBar>
+        <h4>JS</h4>
+        <MarkdownBlock>{IndexedStepProgressBarCode}</MarkdownBlock>
+        <h4>CSS</h4>
+        <MarkdownBlock>{IndexedStepProgressBarCSS}</MarkdownBlock>
+      </Container>
+    );
+  }
+}
 
 const TransitionStepProgressBarCode = `
 \`\`\`jsx
 <ProgressBar
   fillBackground="linear-gradient(to right, #fefb72, #f0bb31)"
-  percent={35}
+  percent={75}
 >
   <Step transition="scale">
     {({ accomplished, index }) => (
@@ -222,69 +267,92 @@ const TransitionStepProgressBarCSS = `
 \`\`\`
 `;
 
-const TransitionStepProgressBar = props => (
-  <Container
-    className="exampleContainer"
-    id={props.id}
-    background={props.background}
-  >
-    <h2>Step progress bar with transitions</h2>
-    <ProgressBar
-      fillBackground="linear-gradient(to right, #fefb72, #f0bb31)"
-      percent={35}
-    >
-      <Step transition="scale">
-        {({ accomplished, index }) => (
-          <div
-            className={`transitionStep ${accomplished ? "accomplished" : null}`}
-          >
-            🌑
-          </div>
-        )}
-      </Step>
-      <Step transition="scale">
-        {({ accomplished, index }) => (
-          <div
-            className={`transitionStep ${accomplished ? "accomplished" : null}`}
-          >
-            🌒
-          </div>
-        )}
-      </Step>
-      <Step transition="scale">
-        {({ accomplished, index }) => (
-          <div
-            className={`transitionStep ${accomplished ? "accomplished" : null}`}
-          >
-            🌓
-          </div>
-        )}
-      </Step>
-      <Step transition="scale">
-        {({ accomplished, index }) => (
-          <div
-            className={`transitionStep ${accomplished ? "accomplished" : null}`}
-          >
-            🌔
-          </div>
-        )}
-      </Step>
-      <Step transition="scale">
-        {({ accomplished, index }) => (
-          <div
-            className={`transitionStep ${accomplished ? "accomplished" : null}`}
-          >
-            🌕
-          </div>
-        )}
-      </Step>
-    </ProgressBar>
-    <h4>JS</h4>
-    <MarkdownBlock>{TransitionStepProgressBarCode}</MarkdownBlock>
-    <h4>CSS</h4>
-    <MarkdownBlock>{TransitionStepProgressBarCSS}</MarkdownBlock>
-  </Container>
-);
+class TransitionStepProgressBar extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      percent: 75
+    };
+  }
+
+  render() {
+    const { percent } = this.state;
+
+    return (
+      <Container
+        className="exampleContainer"
+        id={this.props.id}
+        background={this.props.background}
+      >
+        <h2>Step progress bar with transitions</h2>
+        <ProgressBar
+          fillBackground="linear-gradient(to right, #fefb72, #f0bb31)"
+          percent={percent}
+        >
+          <Step transition="scale">
+            {({ accomplished, index }) => (
+              <div
+                className={`transitionStep ${
+                  accomplished ? "accomplished" : null
+                }`}
+              >
+                🌑
+              </div>
+            )}
+          </Step>
+          <Step transition="scale">
+            {({ accomplished, index }) => (
+              <div
+                className={`transitionStep ${
+                  accomplished ? "accomplished" : null
+                }`}
+              >
+                🌒
+              </div>
+            )}
+          </Step>
+          <Step transition="scale">
+            {({ accomplished, index }) => (
+              <div
+                className={`transitionStep ${
+                  accomplished ? "accomplished" : null
+                }`}
+              >
+                🌓
+              </div>
+            )}
+          </Step>
+          <Step transition="scale">
+            {({ accomplished, index }) => (
+              <div
+                className={`transitionStep ${
+                  accomplished ? "accomplished" : null
+                }`}
+              >
+                🌔
+              </div>
+            )}
+          </Step>
+          <Step transition="scale">
+            {({ accomplished, index }) => (
+              <div
+                className={`transitionStep ${
+                  accomplished ? "accomplished" : null
+                }`}
+              >
+                🌕
+              </div>
+            )}
+          </Step>
+        </ProgressBar>
+        <h4>JS</h4>
+        <MarkdownBlock>{TransitionStepProgressBarCode}</MarkdownBlock>
+        <h4>CSS</h4>
+        <MarkdownBlock>{TransitionStepProgressBarCSS}</MarkdownBlock>
+      </Container>
+    );
+  }
+}
 
 class Example extends React.Component {
   render() {
