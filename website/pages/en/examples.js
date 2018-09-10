@@ -6,12 +6,33 @@
  */
 
 const React = require("react");
+const CompLibrary = require("../../core/CompLibrary.js");
+
+const MarkdownBlock = CompLibrary.MarkdownBlock; /* Used to read markdown */
+const Container = CompLibrary.Container;
+
+const ProgressBar = require("react-step-progress-bar").ProgressBar;
+const Step = require("react-step-progress-bar").Step;
+
+const SimpleProgressBar = props => (
+  <Container
+    padding={["bottom", "top"]}
+    id={props.id}
+    background={props.background}
+  >
+    <ProgressBar percent={75} />
+  </Container>
+);
 
 class Example extends React.Component {
   render() {
     const language = this.props.language || "";
 
-    return <div>WIP</div>;
+    return (
+      <div>
+        <SimpleProgressBar />
+      </div>
+    );
   }
 }
 

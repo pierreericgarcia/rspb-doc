@@ -95,7 +95,9 @@ const siteConfig = {
   scrollToTop: true,
   // You may provide arbitrary config keys to be used as needed by your
   // template. For example, if you need your repo's URL...
-  repoUrl: "https://github.com/pierreericgarcia/react-step-progress-bar"
+  repoUrl: "https://github.com/pierreericgarcia/react-step-progress-bar",
+
+  stylesheets: ["//unpkg.com/react-step-progress-bar@1.0.0/styles.css"]
 };
 
 module.exports = siteConfig;
