@@ -12,7 +12,7 @@ As the official React documentation says :
 
 Which means that render props are the perfect choice for a component with a high need of rendering customization (Hello `<Step/>` component 👋).
 
-In fact the `<Step/>` component only take care of its position on the progress bar and its current status (accomplished / not accomplished). And takes all of it and make it accessible to the React element it returns.
+In fact the `<Step/>` component only take care of its position on the progress bar and its current status (accomplished / not accomplished). All of the render logic is handled by the React element returned by `<Step/>`.
 
 Here are the list of the data available to a React element render by a `<Step/>` component :
 
@@ -33,7 +33,7 @@ Let's take a look at what you can build with this data.
 
 ### Indexed steps
 
-One thing that can come handy is to display the index of the step on the render. Child's play.
+One thing that can be useful is to display the index of the step. Child's play.
 
 Recover the `index` data from the `<Step/>` component and use it in the React element you're rendering.
 

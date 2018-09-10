@@ -49,7 +49,7 @@ class SimpleProgressBar extends React.Component {
 const SimpleGradientProgressBarCode = `
 \`\`\`jsx
 <ProgressBar
-  fillBackground="linear-gradient(to right, #fefb72, #f0bb31)"
+  filledBackground="linear-gradient(to right, #fefb72, #f0bb31)"
   percent={75}
 />
 \`\`\`
@@ -74,7 +74,7 @@ class SimpleGradientProgressBar extends React.Component {
       >
         <h2>Simple progress bar with gradient</h2>
         <ProgressBar
-          fillBackground="linear-gradient(to right, #fefb72, #f0bb31)"
+          filledBackground="linear-gradient(to right, #fefb72, #f0bb31)"
           percent={percent}
         />
         <h4>JS</h4>
@@ -203,7 +203,7 @@ class IndexedStepProgressBar extends React.Component {
 const TransitionStepProgressBarCode = `
 \`\`\`jsx
 <ProgressBar
-  fillBackground="linear-gradient(to right, #fefb72, #f0bb31)"
+  filledBackground="linear-gradient(to right, #fefb72, #f0bb31)"
   percent={75}
 >
   <Step transition="scale">
@@ -286,7 +286,7 @@ class TransitionStepProgressBar extends React.Component {
       >
         <h2>Step progress bar with transitions</h2>
         <ProgressBar
-          fillBackground="linear-gradient(to right, #fefb72, #f0bb31)"
+          filledBackground="linear-gradient(to right, #fefb72, #f0bb31)"
           percent={percent}
         >
           <Step transition="scale">

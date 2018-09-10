@@ -26,7 +26,7 @@ class ProgressBar extends React.Component {
     return (
       <ProgressBar
         percent={75}
-        fillBackground="linear-gradient(to right, #fefb72, #f0bb31)"
+        filledBackground="linear-gradient(to right, #fefb72, #f0bb31)"
       />
     );
   }
@@ -44,11 +44,11 @@ The `percent` prop will reflect the progression of the bar. It has to be a `numb
 
 While being simple the `<ProgressBar/>` component can also be customized.
 
-The `fillBackground` prop allows you to access to the background property of the filled part of the bar. On the other hand there is an `unfilledBackground` to let you style the background of the unfilled part of the bar. As the property access the CSS background property you can use images, gradients or colors. For more details take a look at the [API of the CSS background property](https://developer.mozilla.org/en-US/docs/Web/CSS/background).
+The `filledBackground` prop allows you to access to the background property of the filled part of the bar. On the other hand there is an `unfilledBackground` prop to let you style the background of the unfilled part of the bar. As the property access the CSS background property you can use images, gradients or colors. For more details take a look at the [API of the CSS background property](https://developer.mozilla.org/en-US/docs/Web/CSS/background).
 
 ### A progress bar with steps
 
-Here's the killer feature of [react-step-progress-bar](/) ! You can add steps to your progress bars. Steps allows you to segment the progression and give visual cues to the user. For more idea of use take a look at the [examples page](/examples).
+Here's the killer feature of [react-step-progress-bar](/) ! You can add steps to your progress bars. Steps allows you to segment the progression and give visual cues to the user. For more ideas on how to use steps take a look at the [examples page](/examples).
 
 #### Code :
 
@@ -62,7 +62,7 @@ class StepProgressBar extends React.Component {
     return (
       <ProgressBar
         percent={75}
-        fillBackground="linear-gradient(to right, #fefb72, #f0bb31)"
+        filledBackground="linear-gradient(to right, #fefb72, #f0bb31)"
       >
         <Step transition="scale">
           {({ accomplished }) => (
@@ -107,6 +107,6 @@ As you can see the code is much longer here. Why ?
 
 Because the `<Step/>` component focuses only on the functional part. Which means that this component nearly do zero rendering (only a `<div/>` to encapsulate its children).
 
-That's why the code can look a little verbose. But by only managing the position and the state of the step, the `<Step/>` component allow you to create highly customizable steps in your progress bar. To learn more on this, read the guide on [how to create custom steps](/docs/custom-step-guide).
+That's why the code can look a little verbose. But by only managing the position and the state of the step, the `<Step/>` component allow you to create highly customizable steps in your progress bars. To learn more on this, read the guide on [how to create custom steps](/docs/custom-step-guide).
 
-One of the killer feature of the `<Step/>` component is that it handles transition. You can use built-ins transition using the `transition` props. Also you can create your own transition. And yes, there's a guide for [that](/docs/step-transition-guide).
+One of the killer feature of the `<Step/>` component is that it handles transition. You can use built-ins transition using the `transition` props. Or you can create your own transition. And yes, there's a guide for [that](/docs/step-transition-guide).

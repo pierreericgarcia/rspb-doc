@@ -44,7 +44,7 @@ Here is the list of all the props of the `<Step/>` component.
       <td>transition</td>
       <td>string</td>
       <td></td>
-      <td>Use one of the built-ins transitions</td>
+      <td>Use one of the built-in transitions. Available built-in transitions: scale, rotate, skew.</td>
     </tr>
     <tr>
       <td>transitionDuration (in ms)</td>

@@ -35,13 +35,13 @@ Here is the list of all the props of the `<ProgressBar/>` component.
       <td>By default Steps are spaced linearly on the ProgressBar. You can override this by specifying the positions of the steps (in percent)</td>
     </tr>
     <tr>
-      <td>unfillBackground</td>
+      <td>unfilledBackground</td>
       <td>string</td>
       <td>rgba($color: lightgrey, $alpha: 0.6);</td>
       <td>This props is used directly on the CSS background property of the unfilled part of the ProgressBar.</td>
     </tr>
     <tr>
-      <td>fillBackground</td>
+      <td>filledBackground</td>
       <td>string</td>
       <td>rgba($color: #0074d9, $alpha: 0.8)</td>
       <td>This props is used directly on the CSS background property of the filled part of the ProgressBar</td>
