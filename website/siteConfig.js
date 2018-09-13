@@ -102,7 +102,7 @@ const siteConfig = {
   // template. For example, if you need your repo's URL...
   repoUrl: "https://github.com/pierreericgarcia/react-step-progress-bar",
 
-  stylesheets: ["//unpkg.com/react-step-progress-bar@1.0.0/styles.css"]
+  stylesheets: ["//unpkg.com/react-step-progress-bar@1.0.3/styles.css"]
 };
 
 module.exports = siteConfig;
