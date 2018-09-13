@@ -26,6 +26,11 @@ const siteConfig = {
   url: "https://pierreericgarcia.github.io",
   baseUrl: "/react-step-progress-bar/",
 
+  algolia: {
+    apiKey: "b585113522ea48daeb1cbacc146c5c18",
+    indexName: "react_step_progress_bar"
+  },
+
   // Used for publishing and more
   projectName: "react-step-progress-bar",
   organizationName: "pierreericgarcia",
